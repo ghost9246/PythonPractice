@@ -11,7 +11,7 @@
 
 		if order == 1:
 			for line in range(cnt):
-	
+
 				for tmp in range(cnt-line-1):
 					print(" ", end='')
 
@@ -21,20 +21,92 @@
 				print("")
 
 		elif order == 2:
-			tmp2 = 1
-			for line in range(int(cnt/2)):
-	
-				for tmp in range(line):
-					print(" ", end='')
+			tmp2 = int(cnt/2)
 
-				for tmp in range(tmp2):
-					print("*", end='')
+			if cnt % 2 == 0:
+				starCnt = 2
+				for line in range(tmp2):
 
-				tmp2 = tmp2+2
-				print("")
+					for tmp in range(tmp2 - 1):
+						print(" ", end='')
+
+					for tmp in range(starCnt):
+						print("*", end='')
+
+					starCnt = starCnt + 2
+					tmp2 = tmp2 - 1
+					print("")
+
+			else:
+				starCnt = 1
+				for line in range(tmp2 + 1):
+
+					for tmp in range(tmp2):
+						print(" ", end='')
+
+					for tmp in range(starCnt):
+						print("*", end='')
+
+					starCnt = starCnt + 2
+					tmp2 = tmp2 - 1
+					print("")
 
 		elif order == 3:
-			print("◇")
+			tmp2 = int(cnt/2)
+
+			if cnt % 2 == 0:
+				starCnt = 2
+				for line in range(tmp2):
+
+					for tmp in range(tmp2 - 1):
+						print(" ", end='')
+
+					for tmp in range(starCnt):
+						print("*", end='')
+
+					starCnt = starCnt + 2
+					tmp2 = tmp2 - 1
+					print("")
+
+				tmp2 = int(cnt/2)
+				starCnt = cnt - 2
+				for line in range(tmp2):
+
+					for tmp in range(line + 1):
+						print(" ", end='')
+
+					for tmp in range(starCnt):
+						print("*", end='')
+
+					print("")
+					starCnt = starCnt - 2
+
+			else:
+				starCnt = 1
+				for line in range(tmp2 + 1):
+
+					for tmp in range(tmp2):
+						print(" ", end='')
+
+					for tmp in range(starCnt):
+						print("*", end='')
+
+					starCnt = starCnt + 2
+					tmp2 = tmp2 - 1
+					print("")
+
+				tmp2 = int(cnt/2)
+				starCnt = cnt - 2
+				for line in range(tmp2):
+
+					for tmp in range(line + 1):
+						print(" ", end='')
+
+					for tmp in range(starCnt):
+						print("*", end='')
+
+					print("")
+					starCnt = starCnt - 2
 
 		elif order == 4:
 			print("▷◁")

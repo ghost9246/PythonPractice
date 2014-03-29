@@ -109,7 +109,50 @@
 					starCnt = starCnt - 2
 
 		elif order == 4:
-			print("▷◁")
+			tmp2 = 1
+			tmp3 = cnt-2
+			for line in range(int(cnt/2)):
+				for tmp in range(tmp2):
+					print("*", end='')
+
+				for tmp in range(tmp3):
+					print(" ", end='')
+
+				for tmp in range(tmp2):
+					print("*", end='')
+
+				print("");
+				tmp2 = tmp2 + 1
+				tmp3 = tmp3 - 2
+
+
+			if cnt % 2 == 1:
+				for tmp in range(cnt):
+					print("*", end='')
+
+				print("")
+				tmp3 = 1
+
+			else:
+				tmp3 = 0
+
+			tmp2 = int(cnt/2)
+
+			for line in range(int(cnt/2)):
+				for tmp in range(tmp2):
+					print("*", end='')
+
+				for tmp in range(tmp3):
+					print(" ", end='')
+
+				for tmp in range(tmp2):
+					print("*", end='')
+
+				print("");
+				tmp2 = tmp2 - 1
+				tmp3 = tmp3 + 2
+
+			break
 
 		else:
-			break
+			print("Are you kidding me?");
